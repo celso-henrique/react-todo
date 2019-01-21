@@ -1,6 +1,6 @@
-import React from 'react';
+import React from 'react'
 import PropTypes from 'prop-types'
-import { TextField, Paper, Button, Grid } from '@material-ui/core';
+import { TextField, Paper, Button, Grid } from '@material-ui/core'
 
 export const AddTodo = ({
   inputValue,
@@ -31,18 +31,18 @@ export const AddTodo = ({
       </Grid>
     </Grid>
   </Paper>
-);
+)
 
 AddTodo.propTypes = {
   inputValue: PropTypes.string,
   onInputChange: PropTypes.func,
   onInputKeyPress: PropTypes.func,
   onButtonClick: PropTypes.func
-};
+}
 
 AddTodo.defaultProps = {
   inputValue: '',
   onInputChange: () => {},
   onInputKeyPress: () => {},
   onButtonClick: () => {}
-};
+}

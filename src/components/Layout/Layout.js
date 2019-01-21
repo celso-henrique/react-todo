@@ -1,6 +1,6 @@
-import React from 'react';
+import React from 'react'
 import PropTypes from 'prop-types'
-import { AppBar, Toolbar, Typography, Paper } from '@material-ui/core';
+import { AppBar, Toolbar, Typography, Paper } from '@material-ui/core'
 
 export const Layout = ({ children }) => (
   <Paper
@@ -14,7 +14,7 @@ export const Layout = ({ children }) => (
     </AppBar>
     {children}
   </Paper>
-);
+)
 
 Layout.propTypes = {
   children: PropTypes.oneOfType([

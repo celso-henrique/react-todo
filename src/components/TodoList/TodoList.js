@@ -1,13 +1,9 @@
-import React, { Fragment } from 'react';
+import React, { Fragment } from 'react'
 import PropTypes from 'prop-types'
-import { List, Paper } from '@material-ui/core';
-import { TodoListItem } from '..';
+import { List, Paper } from '@material-ui/core'
+import { TodoListItem } from '..'
 
-export const TodoList = ({
-  items,
-  onItemRemove,
-  onItemCheck
-}) =>  (
+export const TodoList = ({ items, onItemRemove, onItemCheck }) => (
   <Fragment>
     {items.length > 0 && (
       <Paper style={{ margin: 16 }}>
@@ -25,7 +21,7 @@ export const TodoList = ({
       </Paper>
     )}
   </Fragment>
-);
+)
 
 TodoList.propTypes = {
   items: PropTypes.array,
