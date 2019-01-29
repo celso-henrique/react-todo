@@ -17,7 +17,7 @@ describe('TodoList component', () => {
   it('renders items', () => {
     const todoList = mount(<TodoList items={items} />)
 
-    expect(todoList.find('li').length).toBe(2)
+    expect(todoList.find('li').length).toBe(items.length)
   })
 
   it('calls onItemRemove with correct index', () => {

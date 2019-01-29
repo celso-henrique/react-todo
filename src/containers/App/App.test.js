@@ -2,6 +2,8 @@ import React from 'react'
 import { shallow } from 'enzyme'
 import { App } from './App'
 
+const initialItemsLength = 1
+
 describe('App container', () => {
   it('removes a todo from state', () => {
     const app = shallow(<App />)
@@ -21,10 +23,10 @@ describe('App container', () => {
 
     app.instance().addTodo()
 
-    expect(app.state('todos').length).toBe(2)
+    expect(app.state('todos').length).toBe(initialItemsLength + 1)
   })
 
-  it('checks a todo', () => {
+  it('checks a todo in state', () => {
     const app = shallow(<App />)
 
     app.instance().checkTodo(0)
@@ -32,7 +34,7 @@ describe('App container', () => {
     expect(app.state('todos')[0].checked).toBeTruthy()
   })
 
-  it('change inputValue on state', () => {
+  it('change inputValue in state', () => {
     const app = shallow(<App />)
 
     app.instance().changeInput({
@@ -55,7 +57,7 @@ describe('App container', () => {
       which: 13
     })
 
-    expect(app.state('todos').length).toBe(2)
+    expect(app.state('todos').length).toBe(initialItemsLength + 1)
   })
 
   it('it does not create a todo when input key pressed is not 13', () => {
@@ -69,6 +71,6 @@ describe('App container', () => {
       which: 12
     })
 
-    expect(app.state('todos').length).toBe(1)
+    expect(app.state('todos').length).toBe(initialItemsLength)
   })
 })
