@@ -73,7 +73,6 @@ export class App extends Component {
           inputValue={inputValue}
           onInputKeyPress={inputKeyPress}
         />
-
         <TodoList
           items={todos}
           onItemCheck={checkTodo}
